@@ -9,7 +9,8 @@ class Tableau1 {
     create(){
 
         let tiplouf=this.add.image(-300,60, 'tiplouf').setOrigin(0,0);
-        //this.tiplouf.add();
+        this.groundContainer.add(vine203);
+        vine203.scale=0.7
     }
 
 
