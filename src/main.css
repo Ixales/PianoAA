@@ -1,0 +1,25 @@
+body{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    background-color: #717171;
+    text-align: center;
+}
+
+a:hover{
+    color: #ff0000;
+    text-decoration: underline;
+}
+a:visited{
+    color: #880000;
+}
+#game{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+
+}
+
+
+
