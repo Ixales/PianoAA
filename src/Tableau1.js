@@ -6,7 +6,8 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('tiplouf', 'img/tiplouf.jpg');
         this.load.image('pokedex', 'img/whos_that_pokemon.png');
         this.load.image('tiploufNoir', 'img/TiploufNoir.png');
-
+        this.load.image('bulbizarre', 'img/bulbizarre.png');
+        this.load.image('pikachu', 'img/pikachu.png');
     }
 
     create() {
@@ -21,6 +22,14 @@ class Tableau1 extends Phaser.Scene {
         this.Tiplouf=this.add.image(300,300,'tiplouf').setOrigin(0,0);
         this.Tiplouf.alpha=0;
         this.initKeyboard1();
+
+        this.Bulbizarre=this.add.image(300,300,'bulbizarre').setOrigin(0,0);
+        this.Bulbizarre.alpha=0;
+        this.initKeyboard3();
+
+        this.Pikachu=this.add.image(300,300,'pikachu').setOrigin(0,0);
+        this.Pikachu.alpha=0;
+        this.initKeyboard4();
 
 
 
@@ -77,6 +86,47 @@ class Tableau1 extends Phaser.Scene {
             }
         });
 
+
+    }
+    initKeyboard3() {
+        let me = this;
+        this.input.keyboard.on('keydown', function (kevent) {
+            switch (kevent.keyCode) {
+                case Phaser.Input.Keyboard.KeyCodes.E:
+
+                    if (me.Bulbizarre.alpha === 0) {
+                        me.Bulbizarre.setAlpha(1)
+                    } else {
+                        me.Bulbizarre.setAlpha(0)
+                    }
+                    break;
+            }
+        });
+        this.input.keyboard.on('keyup', function (kevent) {
+            switch (kevent.keyCode) {
+
+            }
+        });
+    }
+    initKeyboard4() {
+        let me = this;
+        this.input.keyboard.on('keydown', function (kevent) {
+            switch (kevent.keyCode) {
+                case Phaser.Input.Keyboard.KeyCodes.R:
+
+                    if (me.Pikachu.alpha === 0) {
+                        me.Pikachu.setAlpha(1)
+                    } else {
+                        me.Pikachu.setAlpha(0)
+                    }
+                    break;
+            }
+        });
+        this.input.keyboard.on('keyup', function (kevent) {
+            switch (kevent.keyCode) {
+
+            }
+        });
     }
 
 
